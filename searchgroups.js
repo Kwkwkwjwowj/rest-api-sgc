@@ -9,7 +9,7 @@ app.set('json spaces', 2);
 async function cariGC(q) {
     try {
         const { data } = await axios.get(`https://groupsor.link/group/searchmore/${q.replace(/\s+/g, '-')}`, {
-            timeout: 15000
+            timeout: 30000
         });
 
         const $ = cheerio.load(data);
